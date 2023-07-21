@@ -15,3 +15,9 @@ def detectar_objetos_na_imagem(input_image, output_image, model_path):
     
     return detections
 
+if __name__ == "__main__":
+    input_image = "img_entrada.jpg"
+    output_image = "img_saida.jpg"
+    model_path = "caminho_modelo_YOLO.h5"  # Baixe o modelo YOLOv3 pré-treinado
+
+    detectar_objetos_na_imagem(input_image, output_image, model_path)
