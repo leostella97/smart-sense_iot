@@ -9,4 +9,9 @@ def detectar_objetos_na_imagem(input_image, output_image, model_path):
     # Detecção de objetos na imagem de entrada
     detections = detector.detectObjectsFromImage(input_image, output_image_path=output_image, minimum_percentage_probability=30)
 
+    # Exibindo os resultados
+    for eachObject in detections:
+        print(eachObject["name"], " : ", eachObject["percentage_probability"], " : ", eachObject["box_points"])
     
+    return detections
+
